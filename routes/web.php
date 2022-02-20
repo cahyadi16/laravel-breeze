@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/about', 'about')->name('about')->middleware(['auth']);
+Route::view('/home', 'about')->name('about')->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
