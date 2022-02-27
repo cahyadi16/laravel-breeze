@@ -32,13 +32,23 @@
                                         @csrf
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input class="form-control form-control-lg" id="email" type="email"
-                                                name="email" autofocus placeholder="Enter your email" />
+                                            <input
+                                                class="form-control form-control-lg @error('email') is-invalid @enderror"
+                                                id="email" type="email" name="email" value="{{ old('email') }}"
+                                                placeholder="Enter your email" autofocus />
+                                            @error('email')
+                                                <span class="alert alert-danger text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label" for="password">Password</label>
-                                            <input class="form-control form-control-lg" id="password" type="password"
-                                                name="password" placeholder="Enter your password" />
+                                            <input
+                                                class="form-control form-control-lg @error('password') is-invalid @enderror"
+                                                id="password" type="password" name="password"
+                                                placeholder="Enter your password" />
+                                            @error('password')
+                                                <span class="alert alert-danger text-danger">{{ $message }}</span> <br>
+                                            @enderror
                                             <small>
                                                 <a href="index.html">Forgot password?</a>
                                             </small>
