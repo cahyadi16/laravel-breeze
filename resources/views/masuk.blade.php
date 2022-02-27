@@ -31,14 +31,14 @@
                                     <form method="POST" action="login">
                                         @csrf
                                         <div class="mb-3">
-                                            <label class="form-label">Email</label>
-                                            <input class="form-control form-control-lg" type="email" name="email"
-                                                placeholder="Enter your email" />
+                                            <label for="email" class="form-label">Email</label>
+                                            <input class="form-control form-control-lg" id="email" type="email"
+                                                name="email" autofocus placeholder="Enter your email" />
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input class="form-control form-control-lg" type="password" name="password"
-                                                placeholder="Enter your password" />
+                                            <label class="form-label" for="password">Password</label>
+                                            <input class="form-control form-control-lg" id="password" type="password"
+                                                name="password" placeholder="Enter your password" />
                                             <small>
                                                 <a href="index.html">Forgot password?</a>
                                             </small>
