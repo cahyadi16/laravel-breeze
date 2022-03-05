@@ -20,10 +20,12 @@ Route::get('/', function () {
 
 Route::view('/about', 'about')->name('about')->middleware('auth');
 
-Route::view('/login', 'masuk')->middleware('guest');
+Route::view('/login', 'login')->middleware('guest');
+Route::view('/register', 'register')->middleware('guest');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+// untuk load breze bawaan dari laravel
 require __DIR__ . '/auth.php';

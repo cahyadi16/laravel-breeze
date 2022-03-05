@@ -19,9 +19,9 @@
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center mt-4">
-                            <h1 class="h2">Welcome back</h1>
+                            <h1 class="h2">Selamat Datang</h1>
                             <p class="lead">
-                                Sign in to your account to continue
+                                Silahkan login terlebih dahulu
                             </p>
                         </div>
 
@@ -35,7 +35,7 @@
                                             <input
                                                 class="form-control form-control-lg @error('email') is-invalid @enderror"
                                                 id="email" type="email" name="email" value="{{ old('email') }}"
-                                                placeholder="Enter your email" autofocus />
+                                                placeholder="Masukan email" autofocus />
                                             @error('email')
                                                 <span class="alert alert-danger text-danger">{{ $message }}</span>
                                             @enderror
@@ -45,14 +45,22 @@
                                             <input
                                                 class="form-control form-control-lg @error('password') is-invalid @enderror"
                                                 id="password" type="password" name="password"
-                                                placeholder="Enter your password" />
+                                                placeholder="Masukan password" />
                                             @error('password')
                                                 <span class="alert alert-danger text-danger">{{ $message }}</span> <br>
                                             @enderror
                                             <small>
-                                                <a href="index.html">Forgot password?</a>
+                                                <a href="#">Lupa Password?</a>
+                                            </small> <br>
+                                            <small>
+                                                <p class="text-center">
+                                                    Belum punya akun? <a href="register">Daftar sekarang</a></p>
                                             </small>
                                         </div>
+                                        <div class="mb-3 text-center">
+
+                                        </div>
+
                                         {{-- <div>
                                             <label class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="remember-me"
@@ -62,10 +70,10 @@
                                                 </span>
                                             </label>
                                         </div> --}}
-                                        <div class="text-center mt-3">
-                                            <button class="btn btn-lg btn-primary">Log in</button>
-                                            <!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
+                                        <div class="mt-3">
+                                            <button class="text-right btn btn-lg btn-primary">Log in</button>
                                         </div>
+
                                     </form>
                                 </div>
                             </div>
