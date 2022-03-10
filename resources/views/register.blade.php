@@ -75,13 +75,11 @@
                                         </small>
                                         <div class="mt-3">
                                             <button class="btn btn-lg btn-primary">Register</button>
-                                            <!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

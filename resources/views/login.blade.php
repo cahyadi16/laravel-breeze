@@ -60,7 +60,6 @@
                                         <div class="mb-3 text-center">
 
                                         </div>
-
                                         {{-- <div>
                                             <label class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="remember-me"

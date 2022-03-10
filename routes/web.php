@@ -18,14 +18,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/about', 'about')->name('about')->middleware('auth');
 
 Route::view('/login', 'login')->middleware('guest');
 Route::view('/register', 'register')->middleware('guest');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// menambahkan grup untuk autentikasi dan verifikasi email
+Route::middleware(['auth', 'verified'])->group(function() {
+    
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::view('/about', 'about')->name('about')->middleware('auth');
+});
 
 // untuk load breze bawaan dari laravel
 require __DIR__ . '/auth.php';
