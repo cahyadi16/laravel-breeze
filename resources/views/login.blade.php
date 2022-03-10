@@ -50,7 +50,7 @@
                                                 <span class="alert alert-danger text-danger">{{ $message }}</span> <br>
                                             @enderror
                                             <small>
-                                                <a href="#">Lupa Password?</a>
+                                                <a href="{{ route('password.request') }}">Lupa Password?</a>
                                             </small> <br>
                                             <small>
                                                 <p class="text-center">
