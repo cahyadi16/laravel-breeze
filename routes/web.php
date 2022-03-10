@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::view('/login', 'login')->middleware('guest');
-Route::view('/register', 'register')->middleware('guest');
+// Route::view('/login', 'login')->middleware('guest');
+// Route::view('/register', 'register')->middleware('guest');
 
 // menambahkan grup untuk autentikasi dan verifikasi email
 Route::middleware(['auth', 'verified'])->group(function() {
